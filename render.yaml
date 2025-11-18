@@ -1,20 +1,9 @@
 services:
   - type: web
     name: smarthr
-    env: php
+    runtime: docker
     plan: free
     branch: main
-    buildCommand: |
-      composer install --no-dev --optimize-autoloader
-      php artisan config:clear
-      php artisan cache:clear
-      php artisan view:clear
-      npm install
-      npm run build
-    startCommand: |
-      php artisan migrate --force
-      php artisan storage:link
-      php -S 0.0.0.0:$PORT -t public
     envVars:
       - key: APP_ENV
         value: production
@@ -32,7 +21,3 @@ services:
         value: file
       - key: QUEUE_CONNECTION
         value: sync
-    disk:
-      name: smarthr-storage
-      mountPath: /opt/render/project/src/storage
-      sizeGB: 1
