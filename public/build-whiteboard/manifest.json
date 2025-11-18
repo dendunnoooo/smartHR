@@ -1,0 +1,34 @@
+{
+  "Modules/Whiteboard/resources/apps/ExcaliDraw/app.scss": {
+    "file": "assets/app-B3SC9kv4.css",
+    "src": "Modules/Whiteboard/resources/apps/ExcaliDraw/app.scss",
+    "isEntry": true
+  },
+  "Modules/Whiteboard/resources/apps/ExcaliDraw/main.jsx": {
+    "file": "assets/main-BD64EmS_.js",
+    "name": "main",
+    "src": "Modules/Whiteboard/resources/apps/ExcaliDraw/main.jsx",
+    "isEntry": true,
+    "imports": [
+      "_client-BqeHxaj9.js"
+    ]
+  },
+  "Modules/Whiteboard/resources/apps/TlDraw/css/index.css": {
+    "file": "assets/index-DnwbMbEd.css",
+    "src": "Modules/Whiteboard/resources/apps/TlDraw/css/index.css",
+    "isEntry": true
+  },
+  "Modules/Whiteboard/resources/apps/TlDraw/main.jsx": {
+    "file": "assets/main-BYH1G0zq.js",
+    "name": "main",
+    "src": "Modules/Whiteboard/resources/apps/TlDraw/main.jsx",
+    "isEntry": true,
+    "imports": [
+      "_client-BqeHxaj9.js"
+    ]
+  },
+  "_client-BqeHxaj9.js": {
+    "file": "assets/client-BqeHxaj9.js",
+    "name": "client"
+  }
+}

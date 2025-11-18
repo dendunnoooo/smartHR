@@ -1,0 +1,16 @@
+/* Minimal styles for login variants - copied to public for quick preview */
+:root{--accent:#ff6b6b;--muted:#6b7280;--bg:#f6f8fb}
+body{font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;margin:0}
+
+/* Modern */
+.lv-modern{min-height:100vh}
+.lv-modern-bg{background:linear-gradient(135deg,#ff7a7a,#ffb199);min-height:100vh;display:flex;align-items:center;justify-content:center}
+.lv-modern-panel{background:rgba(255,255,255,0.95);padding:32px;border-radius:12px;max-width:420px;width:92%;box-shadow:0 10px 40px rgba(2,6,23,0.12)}
+.lv-modern-brand img{width:56px;height:56px}
+.lv-modern-brand h1{margin:8px 0;font-size:22px}
+.lv-modern-form .floating{position:relative;margin-bottom:14px}
+.lv-modern-form input{width:100%;padding:14px 12px;border-radius:8px;border:1px solid #e9e9f0}
+.lv-modern-form label{position:absolute;left:12px;top:10px;color:#777;font-size:13px;pointer-events:none;transition:all .12s}
+.lv-modern-form input:focus + label,.lv-modern-form input:not(:placeholder-shown) + label{top:-10px;font-size:11px}
+.lv-modern .lv-socials{display:flex;gap:8px;margin-top:12px}
+.lv-modern .social{flex:1;padding:8px;border-radius:6px;border:1px solid rgba(0,0,0,0.05);background:#fff;cursor:pointer}
