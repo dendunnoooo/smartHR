@@ -44,11 +44,11 @@ COPY . /var/www
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 
-# Install Node dependencies and build assets
-RUN npm ci --legacy-peer-deps && npm run build || npm run build
+# Create public/build directory for assets (skip npm build for now)
+RUN mkdir -p public/build
 
 # Set permissions
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache /var/www/public
 
 # Expose port
 EXPOSE 8080
