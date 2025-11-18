@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: smarthr
+    env: php
+    plan: free
+    branch: main
+    buildCommand: |
+      composer install --no-dev --optimize-autoloader
+      php artisan config:clear
+      php artisan cache:clear
+      php artisan view:clear
+      npm install
+      npm run build
+    startCommand: |
+      php artisan migrate --force
+      php artisan storage:link
+      php -S 0.0.0.0:$PORT -t public
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_URL
+        sync: false
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: SESSION_DRIVER
+        value: cookie
+      - key: CACHE_DRIVER
+        value: file
+      - key: QUEUE_CONNECTION
+        value: sync
+    disk:
+      name: smarthr-storage
+      mountPath: /opt/render/project/src/storage
+      sizeGB: 1
